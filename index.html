@@ -1,0 +1,83 @@
+<div class="page-wrapper">
+    <header class="header">
+        <nav aria-label="Главная навигация">
+            <ul class="nav-list">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+            </ul>
+            <label for="theme-switch" class="theme-toggle-btn">🌓 Сменить тему</label>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero-блок -->
+        <section class="hero">
+            <h1>Добро пожаловать в Студенческий Клуб</h1>
+            <p>Развивайся, общайся, создавай вместе с нами.</p>
+            <a href="#join-form" class="btn">Присоединиться</a>
+        </section>
+
+        <!-- Секция "О клубе" -->
+        <section class="about">
+            <h2>О клубе</h2>
+            <p>Мы объединяем студентов для работы над реальными проектами, спорта и лекций.</p>
+            <!-- TODO: @Участник_А - добавь больше семантического текста про клуб -->
+        </section>
+
+        <!-- Карточки мероприятий (Минимум 6 по ТЗ) -->
+        <section class="events-preview">
+            <h2>Ближайшие мероприятия</h2>
+            <div class="grid-container">
+                <!-- Карточка с модальным окном на :target -->
+                <article class="card">
+                    <h3>Мастер-класс по CSS</h3>
+                    <a href="#modal-1" class="btn-small">Подробнее</a>
+                </article>
+                <article class="card"><h3>Турнир по волейболу</h3></article>
+                <article class="card"><h3>Лекция: IT тренды</h3></article>
+                <article class="card"><h3>Хакатон</h3></article>
+                <article class="card"><h3>Квиз</h3></article>
+                <article class="card"><h3>Киновечер</h3></article>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи с HTML-валидацией -->
+        <section id="join-form" class="form-section">
+            <h2>Стать частью команды</h2>
+            <!-- TODO: @Участник_B - проверь стилизацию состояний :invalid и :focus -->
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="user-name">Имя (минимум 2 символа)</label>
+                    <input type="text" id="user-name" name="user-name" required minlength="2">
+                </div>
+                <div class="form-group">
+                    <label for="user-email">Email</label>
+                    <input type="email" id="user-email" name="user-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </section>
+
+        <!-- FAQ Аккордеон на <details> -->
+        <section class="faq">
+            <h2>Частые вопросы</h2>
+            <details>
+                <summary>Кто может вступить в клуб?</summary>
+                <p>Любой студент нашего ВУЗа.</p>
+            </details>
+            <details>
+                <summary>Это бесплатно?</summary>
+                <p>Да, участие во всех мероприятиях абсолютно бесплатное.</p>
+            </details>
+        </section>
+    </main>
+
+    <!-- Модальное окно (CSS :target) -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn" aria-label="Закрыть модальное окно">&times;</a>
+            <h3>Мастер-класс по CSS</h3>
+            <p>Узнаем про Grid, Flexbox и CSS-переменные.</p>
+        </div>
+    </div>
+</div>

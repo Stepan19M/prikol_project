@@ -1,0 +1,56 @@
+<div class="page-wrapper">
+    <header class="header">
+        <nav aria-label="Главная навигация">
+            <ul class="nav-list">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+            </ul>
+            <label for="theme-switch" class="theme-toggle-btn">🌓 Сменить тему</label>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Расписание мероприятий</h1>
+        
+        <!-- Поле поиска-заглушка -->
+        <div class="search-stub">
+            <label for="search">Поиск мероприятий:</label>
+            <input type="search" id="search" placeholder="Поиск (заглушка)..." disabled>
+        </div>
+
+        <!-- CSS-фильтр на скрытых радиокнопках и :checked ~ -->
+        <div class="filter-system">
+            <input type="radio" name="category" id="cat-all" class="visually-hidden" checked>
+            <input type="radio" name="category" id="cat-lectures" class="visually-hidden">
+            <input type="radio" name="category" id="cat-workshops" class="visually-hidden">
+            <input type="radio" name="category" id="cat-sport" class="visually-hidden">
+
+            <div class="filter-controls">
+                <label for="cat-all" class="filter-btn">Все</label>
+                <label for="cat-lectures" class="filter-btn">Лекции</label>
+                <label for="cat-workshops" class="filter-btn">Воркшопы</label>
+                <label for="cat-sport" class="filter-btn">Спорт</label>
+            </div>
+
+            <div class="grid-container filtered-cards">
+                <!-- TODO: @Участник_B - настрой правильное скрытие карточек через селектор ~ -->
+                <article class="card item-lecture">
+                    <h3>Лекция: IT тренды</h3>
+                    <p>Категория: Лекции</p>
+                </article>
+                <article class="card item-workshops">
+                    <h3>Мастер-класс по CSS</h3>
+                    <p>Категория: Воркшопы</p>
+                </article>
+                <article class="card item-sport">
+                    <h3>Турнир по волейболу</h3>
+                    <p>Категория: Спорт</p>
+                </article>
+                <article class="card item-lectures">
+                    <h3>Лекция: Маркетинг</h3>
+                    <p>Категория: Лекции</p>
+                </article>
+            </div>
+        </div>
+    </main>
+</div>
